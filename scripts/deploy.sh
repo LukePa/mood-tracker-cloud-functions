@@ -1,0 +1,3 @@
+gcloud functions deploy setUpUserData --region=europe-west2 --runtime=nodejs16 --source=./ --env-vars-file .env.yaml --entry-point=setUpUserData --trigger-event=providers/firebase.auth/eventTypes/user.create --trigger-resource=mood-tracker-d1-364818
+
+gcloud functions deploy deleteUserData --region=europe-west2 --runtime=nodejs16 --source=./ --env-vars-file .env.yaml --entry-point=deleteUserData --trigger-event=providers/firebase.auth/eventTypes/user.delete --trigger-resource=mood-tracker-d1-364818
